@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    color: #4C3625;
+    margin: 0;
+    padding: 0; 
+    background: url("../images/background.png") no-repeat center center/cover;
+
+} 
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/mohatta.jpg") no-repeat center center/cover;
+    opacity: 0.2; 
+    z-index: -1; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+.spacer {
+    height: 100px; 
+}
+
+
+.feedback-container {
+    width: 530px; 
+    height:490px;
+    background: transparent;
+    box-shadow: 0 0 8px rgba(250,250,250,0.6);
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 8px;
+    border: 2px solid #4C3625;
+    color: #d3b683;
+}
+
+.feedback-container form {
+    width: 100%;
+    text-align: center;
+    padding: 25px 20px ;
+    
+}
+
+h2 {
+    text-align: center;
+    padding: 10px 0;
+    color:#4C3625;
+}
+form .username {
+    position: relative;
+}
+
+
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    gap: 10px; 
+}
+
+.form-group label {
+    font-weight: bold;
+    min-width: 100px; 
+    color:#4C3625;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color:#4C3625;
+}
+
+label[for="message"] {
+    margin-top: 20px; 
+    display: block; 
+}
+
+label[for="username"]{
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.form-group input {
+    height: 35px;
+    padding: 5px;
+    align-items: center;
+    border: 2px solid #4C3625;
+    border-radius: 20px;
+    background-color:transparent;
+    color: #4C3625 !important;
+    width: 50%; 
+    max-width: 200px; 
+    font-size: 16px;
+}
+
+
+textarea {
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #4C3625;
+    border-radius: 5px;
+    background-color:transparent;
+    color: #4C3625;
+    font-size: 16px; 
+}
+
+.submit-btn {
+    width: 50%;
+    background:#4C3625;
+    font-weight: bolder;
+    opacity: 0.6;
+    border-radius: 20px;
+    color:#d3b683;
+    padding: 10px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submit-btn:hover {
+    background: rgb(233, 190, 112);
+    color: #4C3625;
+}
+
+#responseMessage {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#testimonials {
+    padding: 2em 5em;
+    background: #e1cfbe;
+    display: grid;
+    height: auto;
+    text-align: center;
+}
+#testimonials p{
+    margin-bottom: 30px;
+}
+
+.test-cards {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+
+  .test-card-row {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px; 
+}
+
+
+.test-card {
+    width: 250px; 
+    flex: 0 0 auto; 
+    transition: transform 0.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2em;
+    display: grid;
+    gap: .5em;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.test-card #left-quote-container {
+    width: 20%;
+    margin: 0 auto;
+    fill: #4C3625;
+}
+
+.test-card p {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    color: #7e7c7a;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+.test-card h3 {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    color: #a7896a;
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+
+.slider-track-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+.slider_btn {
+    background: #4C3625;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.slider_btn:hover {
+    background: #3c3834;
+}
+
+
+.t-slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.4em;
+    margin-top: 10px;
+}
+
+.slider_indicator {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    border: none;
+}
+
+.slider_indicator .t-current-slide {
+    color: #3c3834 !important;
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    #testimonials {
+        padding: 2em;
+    }
+
+    .test-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .test-card-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

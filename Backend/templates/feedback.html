@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeritageHub - Feedback</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/feedback_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+       
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/main-logo.png') }}" type="image/x-icon">
+
+
+</head>
+<body>
+    <div id="nav-container"></div>
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeMenu">✖</button>
+        <a href="/">Home</a>
+        <a href="/first">Information Site</a>
+        <a href="events">Events</a>
+        <a href="/ticket">Ticketing</a>
+        <a href="/shop">Souvenir Shop</a>
+        <a href="/analytics">Analytics</a>
+        <a href="/feedback">Feedback</a>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="feedback-container">
+        <h2>We Value Your Opinion</h2>
+        
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <label for="message">Kindly take a moment to tell us what you think</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button class="submit-btn" type="submit">Share Your Feedback</button>
+        </form>
+
+        <div id="responseMessage"></div>
+    </div>
+
+    <div id="testimonials">
+        <h2>Recent Feedbacks</h2>
+        <p>Take a look at what some of our happy visitors to different sites have to say.</p>
+        <div class="test-cards">
+            <div id="feedbackList" class="test-card-row test-card-track">
+                <div class="test-card t-current-slide">Testimonial 1</div> 
+                <div class="test-card">Testimonial 2</div>
+                <div class="test-card">Testimonial 3</div>
+                <div class="test-card">Testimonial 4</div>
+                <div class="test-card">Testimonial 5</div>
+            </div>
+        </div>
+        <div class="slider-track-nav">
+            <button class="slider_btn t-btn_left">❮</button>
+            <div class="t-slider-nav">
+                <button class="slider_indicator t-current-slide"></button>
+                <button class="slider_indicator"></button>
+                <button class="slider_indicator"></button>
+            </div>
+            <button class="slider_btn t-btn_right">❯</button>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='js/feedbacklogic.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeritageHub - Sites</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Information_Style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/main-logo.png') }}" type="image/x-icon">    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<body>
+    <div id="nav-container"></div>
+    
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeMenu">✖</button>
+        <a href="/first">Information Site</a>
+        <a href="/events">Events</a>
+        <a href="/ticket">Ticketing</a>
+        <a href="/shop">Souvenir Shop</a>
+        <a href="/analytics">Analytics</a>
+        <a href="/feedback">Feedback</a>
+    </div>
+
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+            
+            <div class="col-md-4 mb-4" id="moenjodaro">
+                <a href="/mohenjodaro" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/mohenjo_daro.jpg') }}" class="card-img-top" alt="Moenjodaro">
+                        <div class="card-body">
+                            <h5 class="card-title">Mohen jo daro</h5>
+                            <p class="card-text">An ancient Indus Valley civilization site, known for its urban planning.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="taxila">
+                <a href="/taxila" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/taxila.jpg') }}" class="card-img-top" alt="Taxila">
+                        <div class="card-body">
+                            <h5 class="card-title">Taxila</h5>
+                            <p class="card-text">A UNESCO World Heritage Site, famous for its Buddhist heritage.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="makli">
+                <a href="/makli" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/makli_graveyard.jpg') }}" class="card-img-top" alt="Makli Graveyard">
+                        <div class="card-body">
+                            <h5 class="card-title">Makli Graveyard</h5>
+                            <p class="card-text">One of the largest funerary sites in the world, with historical tombs.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="shalimar">
+                <a href="/shalimar" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/shalimar.jpg') }}" class="card-img-top" alt="Shalimar Garden">
+                        <div class="card-body">
+                            <h5 class="card-title">Shalimar Garden</h5>
+                            <p class="card-text">A Mughal-era Persian-style garden located in Lahore.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="mohatta">
+                <a href="/mohatta" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/mohatta.jpg') }}" class="card-img-top" alt="Mohatta Palace">
+                        <div class="card-body">
+                            <h5 class="card-title">Mohatta Palace</h5>
+                            <p class="card-text">A stunning historical palace turned into an art gallery.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="rohtas">
+                <a href="/rohtas" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/rohtas.jpg') }}" class="card-img-top" alt="Rohtas Fort">
+                        <div class="card-body">
+                            <h5 class="card-title">Rohtas Fort</h5>
+                            <p class="card-text">A historical military fort built by the great Sher Shah Suri.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="harappa">
+                <a href="/harappa" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/harappa.jpg') }}" class="card-img-top" alt="Harappa">
+                        <div class="card-body">
+                            <h5 class="card-title">Harappa</h5>
+                            <p class="card-text">A key site of the Indus Valley Civilization with remarkable artifacts.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="baltit">
+                <a href="/baltit" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/baltit.jpg') }}" class="card-img-top" alt="Baltit Fort">
+                        <div class="card-body">
+                            <h5 class="card-title">Baltit Fort</h5>
+                            <p class="card-text">A centuries-old fort in Hunza Valley with Tibetan influences.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="hiran">
+                <a href="/hiran" class="text-decoration-none text-dark">
+                    <div class="card shadow-lg">
+                        <img src="{{ url_for('static', filename='images/hiran.jpg') }}" class="card-img-top" alt="Hiran Minar">
+                        <div class="card-body">
+                            <h5 class="card-title">Hiran Minar</h5>
+                            <p class="card-text">A Mughal-era tower built by Emperor Jahangir in honor of his pet deer.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
+

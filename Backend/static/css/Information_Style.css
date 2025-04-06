@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins, sans-serif;
+    background-color: #E7E3D5; 
+    color: #4C3625; 
+    padding-top: 60px;
+}
+
+h1, h3, h5 {
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8c7553;
+    padding: 15px 60px; 
+    padding-left: 200px;
+    height: 80px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin-left: auto; 
+    margin-right: 80px; 
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    display: inline-block;
+    margin: 0; 
+    padding: 0;
+}
+
+.navbar-menu {
+    margin-right: 30px;
+}
+.navbar-toggler {
+    margin-left:300px;
+}
+
+img{
+    width:250px;
+    height: 250px;
+}
+

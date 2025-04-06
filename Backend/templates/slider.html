@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #testimonials {
+            padding: 2em 5em;
+            background: #fef7f5;
+            display: grid;
+            height: auto;
+            text-align: center;
+        }
+
+
+        .test-titles h3 {
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            color: #a7896a;
+            text-transform: uppercase;
+        }
+
+        .test-titles h2 {
+            font-family: "Petit Formal Script", cursive;
+            font-size: 1.7em;
+            margin: 0.4em 0;
+        }
+
+        .test-titles p {
+            font-family: "Josefin Sans", sans-serif;
+            color: #7b7b7a;
+            font-weight: 300;
+        }
+
+
+        .test-cards {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .test-card-row {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: max-content;  
+            gap: 1em;
+        }
+        
+        .test-card {
+            min-width: 300px; 
+            padding: 20px;
+            background: #f3f3f3;
+            border-radius: 10px;
+        }
+        
+        
+            
+
+
+        .test-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2em;
+            display: grid;
+            width: 250px;
+            gap: 1.5em;
+            transition: transform 0.5s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+        .test-card #left-quote-container {
+            width: 20%;
+            margin: 0 auto;
+            fill: #f8bcbc;
+        }
+
+
+        .test-card p {
+            margin: 0;
+            font-family: "Josefin Sans", sans-serif;
+            color: #7e7c7a;
+            font-weight: 300;
+            font-size: 1.1em;
+        }
+
+
+        .test-card h3 {
+            margin: 0;
+            font-family: "Josefin Sans", sans-serif;
+            color: #a7896a;
+            font-size: 1.3em;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+
+
+        .slider-track-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .slider_btn {
+            background: #a7896a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .slider_btn:hover {
+            background: #45a049;
+        }
+
+
+        .t-slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.4em;
+            margin-top: 10px;
+        }
+
+        .slider_indicator {
+            color: rgba(0, 0, 0, 0.2);
+            font-size: 12px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: gray;
+            cursor: pointer;
+            border: none;
+        }
+
+        .slider_indicator .t-current-slide {
+            color: #3c3834 !important;
+            background-color: black;
+        }
+
+
+        @media (max-width: 768px) {
+            #testimonials {
+                padding: 2em;
+            }
+
+            .test-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .test-card-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="testimonials">
+        <h2>Recent Feedbacks</h2>
+        <div class="test-titles">
+            <h3>Feedbacks</h3>
+            <h2>This is why we do it!</h2>
+            <p>Take a look at what some of our happy customers have to say.</p>
+        </div>
+        <div class="test-cards">
+            <div id="feedbackList" class="test-card-row test-card-track">
+                <div class="test-card t-current-slide">Testimonial 1</div>  
+                <div class="test-card">Testimonial 2</div>
+                <div class="test-card">Testimonial 3</div>
+                <div class="test-card">Testimonial 4</div>
+                <div class="test-card">Testimonial 5</div>
+            </div>
+            
+        </div>
+        <div class="slider-track-nav">
+            <button class="slider_btn t-btn_left">❮</button>
+            <div class="t-slider-nav">
+                <button class="slider_indicator t-current-slide"></button>
+                <button class="slider_indicator"></button>
+                <button class="slider_indicator"></button>
+            </div>
+            <button class="slider_btn t-btn_right">❯</button>
+        </div>
+    </div>
+    <script>
+      const testTrack = document.querySelector(".test-card-row");  
+const testSlides = Array.from(testTrack.children);
+const testNextBtn = document.querySelector(".t-btn_right");
+const testPrevBtn = document.querySelector(".t-btn_left");
+const testNav = document.querySelector(".t-slider-nav");
+const testNavSlides = Array.from(testNav.querySelectorAll(".slider_indicator"));
+
+
+const testSize = testSlides[0].getBoundingClientRect().width;
+
+
+testSlides.forEach((testSlide, index) => {
+  testSlide.style.left = `${testSize * index}px`;
+});
+
+
+testSlides[0].classList.add("t-current-slide");
+
+
+const testSlideMove = (testTrack, tcurrentSlide, targetSlide) => {
+  const moveAmount = parseInt(targetSlide.style.left); 
+  testTrack.style.transform = `translateX(-${moveAmount}px)`;
+  tcurrentSlide.classList.remove("t-current-slide");
+  targetSlide.classList.add("t-current-slide");
+};
+
+
+const testUpdateDots = (currentDot, targetDot) => {
+  if (!currentDot || !targetDot) return;
+  currentDot.classList.remove("t-current-slide");
+  targetDot.classList.add("t-current-slide");
+};
+
+
+testNextBtn.addEventListener("click", () => {
+  const tcurrentSlide = testTrack.querySelector(".t-current-slide");
+  const nextSlide = tcurrentSlide?.nextElementSibling || testSlides[0]; 
+  const currentDot = testNav.querySelector(".t-current-slide");
+  const nextDot = currentDot?.nextElementSibling || testNavSlides[0]; 
+
+  testSlideMove(testTrack, tcurrentSlide, nextSlide);
+  testUpdateDots(currentDot, nextDot);
+});
+
+
+testPrevBtn.addEventListener("click", () => {
+  const tcurrentSlide = testTrack.querySelector(".t-current-slide");
+  const prevSlide = tcurrentSlide?.previousElementSibling || testSlides[testSlides.length - 1]; 
+  const currentDot = testNav.querySelector(".t-current-slide");
+  const prevDot = currentDot?.previousElementSibling || testNavSlides[testNavSlides.length - 1]; 
+
+  testSlideMove(testTrack, tcurrentSlide, prevSlide);
+  testUpdateDots(currentDot, prevDot);
+});
+
+
+testNav.addEventListener("click", (e) => {
+  const targetDot = e.target.closest("button");
+
+  if (!targetDot) return;
+
+  const tcurrentSlide = testTrack.querySelector(".t-current-slide");
+  const currentDot = testNav.querySelector(".t-current-slide");
+  const index = testNavSlides.findIndex(testNavSlide => testNavSlide === targetDot);
+  const targetSlide = testSlides[index];
+
+  if (targetSlide) {
+    testSlideMove(testTrack, tcurrentSlide, targetSlide);
+    testUpdateDots(currentDot, targetDot);
+  }
+});
+
+
+    </script>
+</body>
+</html>

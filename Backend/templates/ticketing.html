@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeritageHub - Ticketing</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/main-logo.png') }}" type="image/x-icon">    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ticketing.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    
+    <script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/main-logo.png') }}" type="image/x-icon">  
+
+</head>
+
+<body>
+    <div id="nav-container"></div>
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeMenu">✖</button>
+        <a href="/first">Information Site</a>
+        <a href="/events">Events</a>
+        <a href="/ticket">Ticketing</a>
+        <a href="/shop">Souvenir Shop</a>
+        <a href="/analytics">Analytics</a>
+        <a href="/feedback">Feedback</a>
+    </div>
+
+
+    <div class="container">
+        <div class="big-card">
+            <section class="ticket-section">
+                <h2>Buy Your Ticket!</h2>
+                <form id="ticketForm" action="/Eticket" method="post">
+                    <div class="input-group">
+                        <label for="heritageSite">Select Heritage Site:</label>
+                        <select id="heritageSite" name="heritageSite">
+                            <option value="Mohenjo-Daro">Mohenjo-Daro</option>
+                            <option value="Taxila">Taxila</option>
+                            <option value="Makli Graveyard">Makli Graveyard</option>
+                            <option value="Shalimar Gardens">Shalimar Gardens</option>
+                            <option value="Mohatta Palace">Mohatta Palace</option>
+                            <option value="Rohtas Fort">Rohtas Fort</option>
+                            <option value="Harappa">Harappa</option>
+                            <option value="Baltit Fort">Baltit Fort</option>
+                            <option value="Hiran Minar">Hiran Minar</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="ticketCategory">Select Category:</label>
+                        <select id="ticketCategory" name="ticketCategory">
+                            <option value="Adult">Adult</option>
+                            <option value="Child">Child</option>
+                            <option value="Student">Student</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="ticketQuantity">Number of Tickets:</label>
+                        <input type="number" id="ticketQuantity" name="ticketQuantity" min="1" value="1">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="visitDate">Select Date:</label>
+                        <input type="date" id="visitDate" name="visitDate" required>
+                    </div>
+
+                    <button type="submit" class="buy-btn">
+                        <i class="fa-solid fa-file-invoice"></i> Generate E-Ticket
+                    </button>
+
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

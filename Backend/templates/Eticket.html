@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeritageHub - E Ticket</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/main-logo.png') }}" type="image/x-icon">    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/eticket.css') }}">
+</head>
+
+
+<body>
+    <div class="ticket-container">
+        <div class="left-section">
+            <div class="logo-title">
+                <img src="{{ url_for('static', filename='images/main-logo.png') }}" alt="Logo"> 
+                <div class="title-container">
+                    <h2 class="heritage-title">HeritageHub</h2>
+                    <p class="scan-instruction">Please have this ready on your device for scanning.</p>
+                </div>
+                <div class="ticket-info">
+                    <h4>This is your</h4>
+                    <h2>E-Ticket</h2>
+                </div>
+            </div>
+            
+            <div class="info">
+                <p><strong>👤 Name:</strong> {{ username }}</p>
+                <p><strong>🎫 Ticket Type:</strong> {{ category }}</p>
+                <p><strong>🔢 Quantity:</strong> {{ quantity }}</p>
+            </div>
+            <div class="info">
+                <p><strong>🏛 Heritage Site:</strong> {{ heritage_site }}</p>
+                <p><strong>📅 Date:</strong> {{ visit_date }} </p>
+                <p id="price-info"><strong>💰 Price:</strong> Calculating...</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='images/main-logo.png') }}">
+                <p class="heritagehub-text">HeritageHub</p>
+            </div>
+            <div class="qr-code">
+                <img id="qr-code" src="" alt="QR Code">
+            </div>
+            <div class="social-icons">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨 Print Ticket</button>
+
+    <script>
+        function calculatePrice(heritageSite, category, quantity) {
+            let basePrices = {
+                "Hiran Minar": 500,
+                "Taxila": 700,
+                "Makli Graveyard": 600,
+                "Mohatta Palace": 800,
+                "Harappa": 750,
+                "Rohtas Fort": 900,
+                "Baltit Fort": 1000
+            };
+
+            let categoryMultipliers = {
+                "Adult": 1.0,
+                "Student": 0.7,
+                "Child": 0.5
+            };
+
+            let basePrice = basePrices[heritageSite] || 500;
+            let multiplier = categoryMultipliers[category] || 1.0;
+
+            return Math.round(basePrice * multiplier * quantity);
+        }
+
+        function generateQRCode() {
+            let username = "{{ username }}"; 
+            let category = "{{ category }}"; 
+            let quantity = parseInt("{{ quantity }}"); 
+            let heritageSite = "{{ heritage_site }}"; 
+            let visitDate = "{{ visit_date }}"; 
+
+            let totalPrice = calculatePrice(heritageSite, category, quantity);
+
+            document.getElementById("price-info").innerHTML = `<strong>💰 Price:</strong> ${totalPrice} PKR`;
+
+            let ticketData = `Name: ${username}, Ticket: ${category}, Quantity: ${quantity}, Total Price: ${totalPrice} PKR, Site: ${heritageSite}, Date: ${visitDate}`;
+            let qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(ticketData)}`;
+
+            document.getElementById('qr-code').src = qrUrl;
+        }
+
+        window.onload = generateQRCode;
+    </script>
+</body>
+</html>

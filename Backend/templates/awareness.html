@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Site Events</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/events.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Heritage Site Events</h1>
+        <div class="filter-buttons">
+            <button onclick="filterEvents('upcoming')">Upcoming Events</button>
+            <button onclick="filterEvents('past')">Past Events</button>
+            <button onclick="filterEvents('all')">All Events</button>
+        </div>
+        
+        <div class="events-list" id="eventsContainer"></div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/events.js') }}"></script>
+</body>
+</html>
