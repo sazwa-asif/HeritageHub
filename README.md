@@ -18,10 +18,10 @@ This is a fourth semester university project of the course 'Database Management 
 <img src="https://github.com/user-attachments/assets/0b5f5321-a195-495f-a0d5-d1a0db01419f" height="700px" width="450px" />
 
 ### Registration  
-<img src="https://github.com/user-attachments/assets/2e5a7cb2-edd0-4046-91a7-d668db39e711" height="700px" width="600px" />
+<img src="https://github.com/user-attachments/assets/2e5a7cb2-edd0-4046-91a7-d668db39e711" height="600px" width="500px" />
 
 ### Login  
-<img src="https://github.com/user-attachments/assets/510ce030-b4c7-42c2-aa06-3254e88602c3" height="700px" width="600px" />
+<img src="https://github.com/user-attachments/assets/510ce030-b4c7-42c2-aa06-3254e88602c3" height="600px" width="500px" />
 
 ### Information Site Page  
 <img src="https://github.com/user-attachments/assets/6963adb9-c7cb-4ac4-9daa-fd9fdc220d6e" height="700px" width="550px" />  
