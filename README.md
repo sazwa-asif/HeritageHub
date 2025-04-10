@@ -11,7 +11,17 @@ Pakistan's cultural heritage is rapidly deteriorating, with many historic sites 
 - **Souvenir**: A mini souvenir shop is available to purchase souvenirs from different sites online with ease.
 
 ## 📌 Scope
-This is a fourth semester university project of the course 'Database Management System'. It is a web application with Oracle database. Future expansions will be made to enhance user experience.
+This is a fourth semester university project of the course 'Database Management System'. It is a full stack web application with Oracle database. Future expansions will be made to enhance user experience.
+
+##  🛠️Technology Stack
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Backend**: Flask (Python)
+- **Database**: Oracle Database
+- **Libraries**:
+  - Passlib for password hashing
+  - Pandas for data manipulation
+  - Chart.js for data visualization
+
 
 ## 🖼️Graphical User Interface (GUIs)
 
@@ -42,17 +52,6 @@ This is a fourth semester university project of the course 'Database Management 
 ### Feedback Page  
 <img src="https://github.com/user-attachments/assets/6a126292-713d-41b8-aee7-392d1a533353" height="500px" width="400px" />
 
-
-
-##  🧰Technologies Used
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap
-- **Backend**: Flask (Python)
-- **Database**: Oracle Database
-- **Libraries**:
-  - Passlib for password hashing
-  - Pandas for data manipulation
-  - Chart.js for data visualization
-
 ## ⚙️Installation
 
 **Database Setup**:  
@@ -63,3 +62,5 @@ Oracle 11g Express Edition is used as the database for this project. SQL queries
 ```bash
 git clone https://github.com/yourusername/heritagehub.git
 cd heritagehub
+
+
