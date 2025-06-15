@@ -26,31 +26,32 @@ This is a fourth semester university project of the course 'Database Management 
 ## 🖼️Graphical User Interface (GUIs)
 
 ### Home Page  
-<img src="https://github.com/user-attachments/assets/0b5f5321-a195-495f-a0d5-d1a0db01419f" height="700px" width="450px" />
+<img src="https://github.com/user-attachments/assets/fc6a89b1-a52c-4c8d-bc05-54fe9434de2a" height="500px" width="450px" />
 
 ### Registration  
-<img src="https://github.com/user-attachments/assets/2e5a7cb2-edd0-4046-91a7-d668db39e711" height="400px" width="400px" />
+<img src="https://github.com/user-attachments/assets/ad82c7e5-e7ca-485c-a661-1fc8b0e30b6e" height="300px" width="400px" />
 
 ### Login  
-<img src="https://github.com/user-attachments/assets/510ce030-b4c7-42c2-aa06-3254e88602c3" height="400px" width="400px" />
+<img src="https://github.com/user-attachments/assets/510ce030-b4c7-42c2-aa06-3254e88602c3" height="350px" width="400px" />
 
 ### Information Site Page  
-<img src="https://github.com/user-attachments/assets/6963adb9-c7cb-4ac4-9daa-fd9fdc220d6e" height="600px" width="450px" />  
-<img src="https://github.com/user-attachments/assets/8c4c476f-32e0-4e26-a4f6-71ee83ee18e2" height="600px" width="450px" />
+<img src="https://github.com/user-attachments/assets/f1c56a20-0f20-4737-8be8-d4850215f972" height="400px" width="500px" /> 
+<img src="https://github.com/user-attachments/assets/8c4c476f-32e0-4e26-a4f6-71ee83ee18e2" height="400px" width="450px" />
 
 ### Events Page  
-<img src="https://github.com/user-attachments/assets/f8ff09e1-874e-497f-ab5f-c257c6b209f5" height="750px" width="450px" />
+<img src="https://github.com/user-attachments/assets/1fd0ee79-21cf-4358-a33a-66ac005b3e85" height="400px" width="550px" />
 
 ### Ticket Booking Page  
-<img src="https://github.com/user-attachments/assets/8eb61c94-af99-4b6e-8591-36bbccc0486b" height="500px" width="500px" />  
+<img src="https://github.com/user-attachments/assets/875db76c-91e8-41da-9186-50d3611dc607" height="350px" width="600px" />  
 <img src="https://github.com/user-attachments/assets/f36e5e99-7db9-4a5c-a91a-d763d861ccb7" height="500px" width="500px" />
 
 ### Souvenir Shop Page  
-<img src="https://github.com/user-attachments/assets/9847aa04-561f-4314-9604-78b3520670c0" height="500px" width="600px" />  
-<img src="https://github.com/user-attachments/assets/a2fc34cd-2887-4204-aacc-a87948108427" height="600px" width="450px" />
+<img src="https://github.com/user-attachments/assets/dfd5e68f-45b3-47eb-957a-ce188619e864" height="500px" width="700px" />
+<img src="https://github.com/user-attachments/assets/a2fc34cd-2887-4204-aacc-a87948108427" height="400px" width="450px" />
 
 ### Feedback Page  
-<img src="https://github.com/user-attachments/assets/6a126292-713d-41b8-aee7-392d1a533353" height="500px" width="400px" />
+<img src="https://github.com/user-attachments/assets/9ad9f415-7386-4ce0-8e35-b7fee9dd3e82" height="500px" width="700px" />
+
 
 ## ⚙️Installation
 
